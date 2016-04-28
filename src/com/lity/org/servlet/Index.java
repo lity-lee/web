@@ -22,8 +22,13 @@ public class Index extends HttpServlet {
 		// TODO Auto-generated method stub
 //		request.get
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		getServletContext().getRequestDispatcher(".jsp").forward(request, response);
+//		response.sendRedirect("index.jsp");
 //		response.getOutputStream().write("<p>hello, world</p>".getBytes());
 //		response.
+		response.getWriter().append("username:" + request.getParameter("username"));
+		response.getWriter().append("password:" + request.getParameter("password"));
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

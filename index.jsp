@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,10 +24,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-	<s:form action="Login" method="execute" >
+	<form action="login.do" method="post" >
 		<input name="username" />
 		<input name="password" />
 		<input type="submit" value="提交" />
-	</s:form> 
+	</form>
+	<c:out value="ddddddddddddddddddddddddd" /> 
   </body>
 </html>
